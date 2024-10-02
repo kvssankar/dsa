@@ -2,7 +2,7 @@ vector<int>nums;
 vector<int>ans(nums.size(),-1);
 int n=nums.size();
 stack<int>s;
-//we have to come from back
+//next greater from right we want so we start from back
 for(int i=n-1;i>=0;i--){
     while(!s.empty() && s.top()<=nums[i]){
         s.pop();
@@ -12,5 +12,6 @@ for(int i=n-1;i>=0;i--){
     }else{
         ans[i]=s.top();
     }
+    s.push(nums[i]);
 }
 return ans;
