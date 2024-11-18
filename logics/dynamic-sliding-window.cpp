@@ -12,7 +12,7 @@ public:
             if(r<n && sum<target){
                 sum+=nums[r];
                 r++;
-            }else if(sum>=target){
+            }else if(sum>=target){ //here r can be greter than end which handles the last case
                 ans=min(ans,r-l);
                 sum-=nums[l];
                 l++;
