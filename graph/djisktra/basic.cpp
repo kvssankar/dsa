@@ -10,6 +10,9 @@ public:
         pq.push({0,start});
         vector<int> visited(n,0);
         vector<int>dis(n,INT_MAX);
+        dis[start]=0;
+
+        
         while(!pq.empty()){
             auto temp=pq.top();
             int node=temp.second;
