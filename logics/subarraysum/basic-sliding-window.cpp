@@ -10,3 +10,5 @@ int findmax(int arr[],int s,int k){
 	}
 	return m;
 }
+
+// When we reach the kth element (at index k-1), our window includes elements from index 0 to index k-1, which is exactly k elements.
