@@ -2,6 +2,9 @@
 #include <vector>
 using namespace std;
 
+//probs:
+//https://leetcode.com/contest/weekly-contest-442/problems/properties-graph/
+
 class DisjointUnionSets {
     vector<int> rank, parent;
 
@@ -20,13 +23,13 @@ public:
 
     // Find the representative of the set that x belongs to
     int find(int i) {
-        int root = parent[i];
+        
       
-        if (parent[root] != root) {
-            return parent[i] = find(root);
+        if (parent[i] != i) {
+            return parent[i] = find(i);
         }
       
-        return root;
+        return i;
     }
 
     // Union of sets containing x and y
