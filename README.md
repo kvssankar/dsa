@@ -22,3 +22,27 @@ int main() {
     cout << "Sum: " << sum << endl;
     return 0;
 }
+
+
+#include <iostream>
+#include <vector>
+#include <string>
+
+using namespace std;
+
+vector<string> split(const string& str, char delimiter) {
+    vector<string> result;
+    int start = 0;
+
+    for (int i = 0; i < str.length(); i++) {
+        if (str[i] == delimiter) {
+            result.push_back(str.substr(start, i - start));
+            start = i + 1;
+        }
+    }
+
+    // Add the last part
+    result.push_back(str.substr(start));
+
+    return result;
+}
