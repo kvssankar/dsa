@@ -28,3 +28,5 @@ Constructor
 
 ----------
 
+jdk->jre+compiler(create class file)->jvm(run class file)+libraries
+
