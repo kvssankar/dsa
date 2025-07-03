@@ -1,18 +1,15 @@
 // 3 5 1 2 3
-     m
-int findPivot(int array[], int size) {
-    int left = 0;
-    int right = size - 1;
-
-    while (left < right) {
-        int mid = left + (right - left) / 2;
-
-        if (array[mid] > array[right]) {
-            left = mid + 1;
-        } else {
-            right = mid;
+ //    m
+ int l=0;
+        int r=n-1;
+       
+        while(l<r){
+            int m=l+(r-l)/2;
+            if(nums[m]>nums[r]){
+                l=m+1;
+            }else if(nums[m]<nums[r]){
+                r=m;
+            }else{
+                r--;
+            }
         }
-    }
-
-    return left;
-}
