@@ -23,13 +23,10 @@ public:
 
     // Find the representative of the set that x belongs to
     int find(int i) {
-        
-      
-        if (parent[i] != i) {
-            return parent[i] = find(i);
+        if (parents[i] != i) {
+            parents[i] = find(parents[i]);   // recurse on the *parent*, not on i
         }
-      
-        return i;
+        return parents[i];
     }
 
     // Union of sets containing x and y
