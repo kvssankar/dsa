@@ -1,6 +1,7 @@
 #include <bits/stdc++.h>
 using namespace std;
 
+//find min n times
 void selectionSort(int arr[], int n){
     for(int i=0;i<n-1;i++){
         int min_idx=i;
@@ -25,3 +26,12 @@ int main(){
     selectionSort(arr,n);
     print(arr,n);
 }
+
+| **Property**                     | **Value**                                   |
+| -------------------------------- | ------------------------------------------- |
+| **Stability**                    | ❌ No (can be made stable with extra effort) |
+| **In-place**                     | ✅ Yes (O(1) extra space)                    |
+| **Best Case Time Complexity**    | **O(n²)**                                   |
+| **Average Case Time Complexity** | O(n²)                                       |
+| **Worst Case Time Complexity**   | **O(n²)**                                   |
+| **Space Complexity**             | **O(1)**                                    |

@@ -43,4 +43,4 @@ public:
         }
         return mste.size()==0 ? 0 : mste[mste.size()-1];
     }
-};©leetcode
+};

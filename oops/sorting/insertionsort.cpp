@@ -1,12 +1,12 @@
 #include <bits/stdc++.h>
 using namespace std;
-
+//find place of i in left sorted
 void insertionSort(int arr[], int n){
     for(int i=1;i<n;i++){
         int j=i-1;
         int key=arr[i];
         for(;j>=0;j--){
-            if(arr[j]>arr[i]){
+            if(arr[j]>arr[j+1]){
                 arr[j+1]=arr[j];
             }else{
                 break;
@@ -28,3 +28,12 @@ int main(){
     insertionSort(arr,n);
     print(arr,n);
 }
+
+| Property                     | Value                  |
+| -------------------------------- | -------------------------- |
+| Stability                    | ✅ Yes                      |
+| In-place                     | ✅ Yes (O(1) extra space)   |
+| Best Case Time Complexity    | O(n) (already sorted)  |
+| Average Case Time Complexity | O(n²)                      |
+| Worst Case Time Complexity   | O(n²) (reverse sorted) |
+| Space Complexity             | O(1)                   |

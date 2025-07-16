@@ -1,6 +1,7 @@
 #include <bits/stdc++.h>
 using namespace std;
 
+//sawp n2 times
 void bubbleSort(int arr[], int n){
     bool isSwapped=false;
     for(int i=0;i<n-1;i++){
@@ -27,3 +28,13 @@ int main(){
     bubbleSort(arr,n);
     print(arr,n);
 }
+
+| Property                     | Value                                |
+| -------------------------------- | ---------------------------------------- |
+| Stability                    | Yes                                      |
+| In-place                     | Yes                                      |
+| Best Case Time Complexity    | O(n) (when array is already sorted)  |
+| Average Case Time Complexity | O(n²)                                    |
+| Worst Case Time Complexity   | O(n²) (when array is reverse sorted) |
+| Space Complexity             | O(1) (constant auxiliary space)          |
+
