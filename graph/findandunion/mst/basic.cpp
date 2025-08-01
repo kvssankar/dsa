@@ -1,8 +1,8 @@
 class Solution {
 public:
-    int find(vector<int>&parent,int x){
-        if(parent[x]!=x){
-            return parent[x]=find(parent,parent[x]);
+    int find(vector<int>& parent, int x) {
+        if (parent[x] != x) {
+            parent[x] = find(parent, parent[x]); // path compression
         }
         return parent[x];
     }
